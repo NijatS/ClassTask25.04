@@ -133,6 +133,9 @@ nav {
   letter-spacing: -1%;
   color: #a5acba;
 }
+.welcome .welcome_container .welcome_text span {
+  display: none;
+}
 
 .welcome_buttons {
   padding: 0 32px;
@@ -235,7 +238,6 @@ nav {
 .welcome_cards .cards .card .card_text > div:nth-child(3) {
   border: 1px solid #2e3545;
   margin: 24px 0;
-  width: 320px;
   height: 0px;
 }
 .welcome_cards .cards .card .card_text .card_check {
@@ -276,4 +278,54 @@ nav {
   color: #437ef7;
   background-color: #1c2534;
   transform: scale(1.1);
+}
+
+@media screen and (max-width: 1280px) {
+  .container {
+    width: 672px;
+    padding: 0;
+  }
+  nav {
+    padding: 0;
+  }
+  nav .navbar_container {
+    padding: 0 16px;
+    height: 64px;
+  }
+  nav .navbar_container .left_side_navbar .navbar_links {
+    display: none;
+  }
+  nav .navbar_container .right_side_navbar button {
+    display: none;
+  }
+  nav .navbar_container .right_side_navbar img {
+    display: initial;
+  }
+  .welcome {
+    padding: 48px 48px 40px;
+  }
+  .welcome .welcome_container {
+    width: 672px;
+    height: 196px;
+    padding: 0;
+  }
+  .welcome .welcome_container .welcome_text span {
+    display: initial;
+  }
+  .welcome_cards {
+    padding: 40px 32px;
+  }
+  .welcome_cards .welcome_cards_container {
+    width: 704px;
+    height: 964px;
+  }
+  .welcome_cards .welcome_cards_container .cards {
+    width: 704px;
+    height: 964px;
+    flex-wrap: wrap;
+  }
+  .welcome_cards .welcome_cards_container .cards .card {
+    width: 336px;
+    height: 466px;
+  }
 }

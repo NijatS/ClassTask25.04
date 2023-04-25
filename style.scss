@@ -112,7 +112,6 @@ nav {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   .welcome_container {
     height: 324px;
     display: flex;
@@ -126,6 +125,9 @@ nav {
       row-gap: 24px;
       p {
         @include grayText();
+      }
+      span {
+        display: none;
       }
     }
   }
@@ -227,7 +229,6 @@ nav {
         & > div:nth-child(3) {
           border: 1px solid #2e3545;
           margin: 24px 0;
-          width: 320px;
           height: 0px;
         }
         .card_check {
@@ -261,6 +262,62 @@ nav {
           color: $blue_button_color;
           background-color: #1c2534;
           transform: scale(1.1);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .container {
+    width: 672px;
+    padding: 0;
+  }
+  nav {
+    padding: 0;
+    .navbar_container {
+      padding: 0 16px;
+      height: 64px;
+      .left_side_navbar {
+        .navbar_links {
+          display: none;
+        }
+      }
+      .right_side_navbar {
+        button {
+          display: none;
+        }
+        img {
+          display: initial;
+        }
+      }
+    }
+  }
+  .welcome {
+    padding: 48px 48px 40px;
+    .welcome_container {
+      width: 672px;
+      height: 196px;
+      padding: 0;
+      .welcome_text {
+        span {
+          display: initial;
+        }
+      }
+    }
+  }
+  .welcome_cards {
+    padding: 40px 32px;
+    .welcome_cards_container {
+      width: 704px;
+      height: 964px;
+      .cards {
+        width: 704px;
+        height: 964px;
+        flex-wrap: wrap;
+        .card {
+          width: 336px;
+          height: 466px;
         }
       }
     }
