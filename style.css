@@ -6,6 +6,7 @@
 
 body {
   background-color: #151b28;
+  font-family: "Inter";
 }
 
 h1 {
@@ -24,10 +25,8 @@ button {
 
 nav {
   border-bottom: 1px solid #2e3545;
-  height: 86px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .container {
@@ -137,6 +136,7 @@ nav {
 
 .welcome_buttons {
   padding: 0 32px;
+  width: 100%;
   display: flex;
   justify-content: center;
 }
@@ -176,5 +176,104 @@ nav {
 }
 
 .welcome_cards {
-  padding: 0 64px;
+  padding: 64px 0;
+}
+.welcome_cards .cards {
+  display: flex;
+  gap: 32px;
+  width: 1216px;
+  height: 466px;
+}
+.welcome_cards .cards .card {
+  width: 384px;
+  height: 466px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  background: #1c2534;
+  border: 1px solid #252d3c;
+  border-radius: 5px;
+  gap: 32px;
+}
+.welcome_cards .cards .card .card_text p {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  color: #a5acba;
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.welcome_cards .cards .card .card_text p span {
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 44px;
+  letter-spacing: -0.02em;
+  color: #f9f9f9;
+}
+.welcome_cards .cards .card .card_text > div:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+}
+.welcome_cards .cards .card .card_text > div:nth-child(2) h2 {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: -0.02em;
+  color: #f9f9f9;
+}
+.welcome_cards .cards .card .card_text > div:nth-child(2) p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.1px;
+  color: #a5acba;
+}
+.welcome_cards .cards .card .card_text > div:nth-child(3) {
+  border: 1px solid #2e3545;
+  margin: 24px 0;
+  width: 320px;
+  height: 0px;
+}
+.welcome_cards .cards .card .card_text .card_check {
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+}
+.welcome_cards .cards .card .card_text .card_check > div {
+  display: flex;
+  -moz-column-gap: 12px;
+       column-gap: 12px;
+  align-items: center;
+  height: 24px;
+}
+.welcome_cards .cards .card .card_text .card_check > div > p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.1px;
+  color: #ffffff;
+  margin: 0;
+}
+.welcome_cards .cards .card button {
+  font-family: "Inter";
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 22px;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  transition: 0.3s;
+  padding: 12px 18px;
+  background: #437ef7;
+  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.04);
+  color: #fff;
+}
+.welcome_cards .cards .card button:hover {
+  border-color: #437ef7;
+  color: #437ef7;
+  background-color: #1c2534;
+  transform: scale(1.1);
 }

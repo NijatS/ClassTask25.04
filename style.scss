@@ -1,10 +1,13 @@
+$main_background: #151b28;
+$blue_button_color: #437ef7;
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 body {
-  background-color: #151b28;
+  background-color: $main_background;
+  font-family: "Inter";
 }
 h1 {
   font-family: "Inter";
@@ -29,10 +32,8 @@ button {
 }
 nav {
   border-bottom: 1px solid #2e3545;
-  height: 86px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 .container {
   padding: 0px 32px;
@@ -81,7 +82,7 @@ nav {
     button {
       &:first-child {
         @include NavButtons;
-        color: #437ef7;
+        color: $blue_button_color;
         background-color: transparent;
         &:hover {
           transform: scale(1.1);
@@ -91,12 +92,12 @@ nav {
         @include NavButtons;
         padding: 12px 18px;
         color: #fff;
-        background: #437ef7;
+        background: $blue_button_color;
         box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.04);
         &:hover {
           background-color: #2e3545;
-          border-color: #437ef7;
-          color: #437ef7;
+          border-color: $blue_button_color;
+          color: $blue_button_color;
           transform: scale(1.1);
         }
       }
@@ -140,6 +141,7 @@ nav {
 }
 .welcome_buttons {
   padding: 0 32px;
+  width: 100%;
   display: flex;
   justify-content: center;
   .buttons {
@@ -168,5 +170,99 @@ nav {
   }
 }
 .welcome_cards {
-  padding: 0 64px;
+  padding: 64px 0;
+  .cards {
+    display: flex;
+    gap: 32px;
+    width: 1216px;
+    height: 466px;
+    .card {
+      width: 384px;
+      height: 466px;
+      padding: 32px;
+      display: flex;
+      flex-direction: column;
+      background: #1c2534;
+      border: 1px solid #252d3c;
+      border-radius: 5px;
+      gap: 32px;
+      .card_text {
+        p {
+          font-family: "Inter";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 20px;
+          line-height: 28px;
+          color: #a5acba;
+          display: flex;
+          align-items: center;
+          margin-bottom: 16px;
+          span {
+            font-weight: 600;
+            font-size: 36px;
+            line-height: 44px;
+            letter-spacing: -0.02em;
+            color: #f9f9f9;
+          }
+        }
+        & > div:nth-child(2) {
+          display: flex;
+          flex-direction: column;
+          row-gap: 8px;
+          h2 {
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 28px;
+            letter-spacing: -0.02em;
+            color: #f9f9f9;
+          }
+          p {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: -0.1px;
+            color: #a5acba;
+          }
+        }
+        & > div:nth-child(3) {
+          border: 1px solid #2e3545;
+          margin: 24px 0;
+          width: 320px;
+          height: 0px;
+        }
+        .card_check {
+          display: flex;
+          flex-direction: column;
+          row-gap: 12px;
+          & > div {
+            display: flex;
+            column-gap: 12px;
+            align-items: center;
+            height: 24px;
+            & > p {
+              font-weight: 400;
+              font-size: 16px;
+              line-height: 24px;
+              letter-spacing: -0.1px;
+              color: #ffffff;
+              margin: 0;
+            }
+          }
+        }
+      }
+      button {
+        @include NavButtons();
+        padding: 12px 18px;
+        background: $blue_button_color;
+        box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.04);
+        color: #fff;
+        &:hover {
+          border-color: $blue_button_color;
+          color: $blue_button_color;
+          background-color: #1c2534;
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
 }
