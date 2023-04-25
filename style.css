@@ -10,7 +10,6 @@ body {
 }
 
 h1 {
-  font-family: "Inter";
   font-weight: 700;
   font-size: 52px;
   line-height: 60px;
@@ -52,7 +51,6 @@ nav {
   gap: 32px;
 }
 .navbar_container .left_side_navbar .navbar_links a {
-  font-family: "Inter";
   font-weight: 600;
   font-size: 15px;
   line-height: 22px;
@@ -69,7 +67,6 @@ nav {
        column-gap: 24px;
 }
 .navbar_container .right_side_navbar button:first-child {
-  font-family: "Inter";
   font-weight: 600;
   font-size: 15px;
   line-height: 22px;
@@ -83,7 +80,6 @@ nav {
   transform: scale(1.1);
 }
 .navbar_container .right_side_navbar button:nth-child(2) {
-  font-family: "Inter";
   font-weight: 600;
   font-size: 15px;
   line-height: 22px;
@@ -125,7 +121,6 @@ nav {
   row-gap: 24px;
 }
 .welcome .welcome_container .welcome_text p {
-  font-family: "Inter";
   font-weight: 400;
   font-size: 18px;
   line-height: 26px;
@@ -154,28 +149,36 @@ nav {
   align-items: center;
 }
 .welcome_buttons .buttons button:first-child {
-  font-family: "Inter";
   font-weight: 600;
   font-size: 14px;
   line-height: 20px;
   width: 185px;
   height: 38px;
   border: 1px solid transparent;
+  transition: 0.3s;
   background: #333b48;
   box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.04);
   border-radius: 5px;
   color: #f9f9f9;
 }
+.welcome_buttons .buttons button:first-child:hover {
+  background-color: #437ef7;
+}
 .welcome_buttons .buttons button:last-child {
-  font-family: "Inter";
   font-weight: 600;
   font-size: 14px;
   line-height: 20px;
   width: 185px;
   height: 38px;
   border: 1px solid transparent;
+  transition: 0.3s;
   background-color: transparent;
   color: #a5acba;
+  border-radius: 5px;
+}
+.welcome_buttons .buttons button:last-child:hover {
+  background-color: #437ef7;
+  color: #f9f9f9;
 }
 
 .welcome_cards {
@@ -234,6 +237,7 @@ nav {
   line-height: 24px;
   letter-spacing: -0.1px;
   color: #a5acba;
+  margin: 0;
 }
 .welcome_cards .cards .card .card_text > div:nth-child(3) {
   border: 1px solid #2e3545;
@@ -261,7 +265,6 @@ nav {
   margin: 0;
 }
 .welcome_cards .cards .card button {
-  font-family: "Inter";
   font-weight: 600;
   font-size: 15px;
   line-height: 22px;
@@ -289,8 +292,12 @@ nav {
     padding: 0;
   }
   nav .navbar_container {
-    padding: 0 16px;
+    padding: 0;
     height: 64px;
+  }
+  nav .navbar_container .left_side_navbar img {
+    width: 128px;
+    height: 32px;
   }
   nav .navbar_container .left_side_navbar .navbar_links {
     display: none;
@@ -327,5 +334,54 @@ nav {
   .welcome_cards .welcome_cards_container .cards .card {
     width: 336px;
     height: 466px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container {
+    width: 343px;
+    padding: 0;
+  }
+  h1 {
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 44px;
+    text-align: center;
+    letter-spacing: -0.02em;
+    color: #f9f9f9;
+  }
+  .welcome {
+    padding: 32px 16px 40px;
+  }
+  .welcome .welcome_container {
+    width: 343px;
+    height: 252px;
+  }
+  .welcome_buttons {
+    padding: 0 16px;
+  }
+  .welcome_buttons .buttons {
+    width: 343px;
+  }
+  .welcome_cards {
+    padding: 0;
+  }
+  .welcome_cards .welcome_cards_container {
+    padding: 32px 16px;
+    width: 375px;
+    height: 1414px;
+  }
+  .welcome_cards .welcome_cards_container .cards {
+    width: 343px;
+    height: 1350px;
+    flex-wrap: wrap;
+  }
+  .welcome_cards .welcome_cards_container .cards .card {
+    width: 343px;
+    height: 426px;
+    padding: 24px;
+    gap: 24px;
+  }
+  .welcome_cards .welcome_cards_container .cards .card .card_text > div:nth-child(3) {
+    margin: 16px 0;
   }
 }
