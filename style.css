@@ -8,6 +8,18 @@ body {
   background-color: #151b28;
 }
 
+h1 {
+  width: 580px;
+  font-family: "Inter";
+  font-weight: 700;
+  font-size: 52px;
+  line-height: 60px;
+  text-align: center;
+  margin: auto;
+  letter-spacing: -0.01em;
+  color: #f9f9f9;
+}
+
 nav {
   padding: 20px 80px;
   border-bottom: 1px solid #2e3545;
@@ -91,4 +103,29 @@ nav {
 }
 .navbar_container .right_side_navbar img {
   display: none;
+}
+
+.welcome_container {
+  height: 324px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.welcome_container .welcome_text {
+  display: flex;
+  flex-direction: column;
+  width: 640px;
+  row-gap: 24px;
+}
+.welcome_container .welcome_text p {
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
+  text-align: center;
+  letter-spacing: -1%;
+  color: #a5acba;
+}
+.welcome_container .welcome_buttons {
+  margin: auto;
 }
